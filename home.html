@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bitcrushfanclub<3</title>
+    <link rel="icon" type="image/x-icon" href="./LogoNoAlpha_Blue.tiff">
     <style>
         @font-face {
             font-family: "Authentic";
-            src: url(authentic-sans-condensed-130.otf);
+            src: url(assets/authentic-sans-condensed-130.otf);
         }
 
         @font-face {
             font-family: "Authentic Thin";
-            src: url(authentic-sans-condensed-60.otf);
+            src: url(assets/authentic-sans-condensed-60.otf);
         }
 
         * {
@@ -21,17 +22,27 @@
 
         body {
             background-color: aliceblue;
-            width: 55%;
+            width: 90%;
             margin: auto;
         }
+
+        /* h2 {
+            font-family: "Authentic Thin";
+            font-size: 1rem;
+        } */
 
         .main {
             font-family: "Authentic";
             font-size: 3vw;
             color: silver;
-            padding: 2rem;
-            border: 0.6vw;
-            border-style: dashed;
+            /* padding: 2rem; */
+            /* border: 0.6vw; */
+            /* border-style: dashed; */
+            /* column-count: 2; */
+
+            display: grid;
+            /* grid-template-columns: 2fr 3fr; */
+            grid-template-columns: 1fr 1fr;
         }
 
         .omschrijving {
@@ -41,9 +52,72 @@
             text-align: justify;
         }
 
-        .logo {
-            width: 23%;
-            margin: auto;
+        .column-1 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 2rem;
+        }
+
+        .column-1 img {
+            width: 100%; 
+            height: 100%;
+            display: block;
+            object-fit:cover;
+            border-radius: 4px;
+        }
+
+        .column-1 .tooltip {
+            flex: 0 1 calc(33% - 10px); 
+            box-sizing: border-box;
+            /* height: 25vh; */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .column-2 {
+            padding: 2rem;
+            border-left: 0.5rem;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 0;
+            border-style:dashed;
+        }
+
+        .tooltip {
+            position:relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 90%;
+            background-color:thistle;
+            color: aliceblue;
+            text-align: center;
+            padding: 5px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 10;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+
+            font-size: 1vw;
+            /* pointer-events: none; */
+        }
+
+        .tooltip:hover .tooltiptext {
+        visibility: visible;    
+        }
+
+        .logo img {
+            position: absolute;
+            left: 45%;
+            bottom: 5%;
+            width: 10vw;
         }
 
         
@@ -52,22 +126,52 @@
 <body>
     <br>
     <div class="main">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <div class="omschrijving">
-            <u>bitcrush fanclub <3</u> is an art collective made of young multidisciplinary artists with a common interest in digital music and art.
+        <div class="column-1">
+            <h2>members:</h2>
+            <div class="tooltip">
+                <img loading="lazy"  src="./assets/members/alma.png" alt="">
+                <span class="tooltiptext">◊◊dagerblad◊◊</span>
+            </div>
+            <div class="tooltip">
+                <img loading="lazy"  src="./assets/members/rj.jpg" alt="">
+                <span class="tooltiptext">roman-james</span>
+            </div>
+            <div class="tooltip">
+                <img loading="lazy"  src="./assets/members/sio.jpg" alt="">
+                <span class="tooltiptext">Sio's Orange Core</span>
+            </div>
+            <div class="tooltip">
+                <img loading="lazy"  src="./assets/members/syd.JPG" alt="">
+                <span class="tooltiptext">dj syddyboy</span>
+            </div>
+            <div class="tooltip">
+                <img loading="lazy"  src="./assets/members/zegenmij.jpg" alt="">
+                <span class="tooltiptext">zegenmij@25</span>
+            </div>
+
+        </div>
+
+        <div class="column-2">
+            <h2>events:</h2>
             <br>
-            ‘fanclub’ means to us being fans of eachother;
-            practicing fan culture symbolises our strive towards collectivity in art and life. <u>bitcrush fanclub <3</u> consists of experimental pop artists who are mostly found in inclusive spaces. We center fluid identity and socially accessible art.
+            <p><u>14 February</u> : Tivoli Vredenburg Utrecht</p>
+            <div class="omschrijving">
+            </div>
+            <br>
+            <p><u>12 March</u> : internetcafé @ ACU Utrecht</p>
+
+            <br>
+            <div class="omschrijving">
+                <u>bitcrush fanclub <3</u> is an art collective made of young multidisciplinary artists with a common interest in digital music and art.
+                <br>
+                ‘fanclub’ means to us being fans of eachother;
+                practicing fan culture symbolises our strive towards collectivity in art and life. <u>bitcrush fanclub <3</u> consists of experimental pop artists who are mostly found in inclusive spaces. We center fluid identity and socially accessible art.
+            </div>
         </div>
-        <br>
-        <p><u>14 February</u> : Tivoli Vredenburg Utrecht</p>
-        <div class="omschrijving">
+
+        <div class="logo">
+            <img src="LogoNoAlpha_Blue.tiff">
         </div>
-        <br>
-        <p><u>12 March</u> : ACU Utrecht</p>
     </div>
 
 </body>
