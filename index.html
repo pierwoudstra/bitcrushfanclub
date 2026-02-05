@@ -20,18 +20,63 @@
         }
 
         body {
-            background-color: aliceblue;
-            width: 55%;
-            margin: auto;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+
+            /* background-color: transparent; */
+            /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E"); */
+            /* background-color: aliceblue; */
+            background-color: rgba(240,248,255,0.7);
+            /*
+            background-repeat: repeat;
+            background-size: 182px;
+            background-blend-mode:hard-light; */
+            overflow-x: hidden;
+    
+        }
+
+        .bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            width: 200%;
+            height: 200vh;
+            /* background-color: aliceblue; */
+            background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+            background-repeat: repeat;
+            animation: bg-animation 0.2s infinite;
+            opacity: .7;
+            visibility: visible;
+            pointer-events:none;
+        }
+
+        @keyframes bg-animation {
+            0% { transform: translate(0,0) }
+            50% {transform: translate(-5%, 0)}
+            100% { transform: translate(5%,0) }
         }
 
         .main {
+          
             font-family: "Authentic";
             font-size: 3vw;
             color: silver;
-            padding: 2rem;
-            border: 0.6vw;
-            border-style: dashed;
+            /* padding: 2rem; */
+            /* border: 0.6vw; */
+            /* border-style: dashed; */
+        }
+
+        a {
+            color: silver;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(182, 145, 255);
         }
 
         .omschrijving {
@@ -42,32 +87,36 @@
         }
 
         .logo {
-            width: 23%;
+            width: 100%;
             margin: auto;
+            mix-blend-mode:color-burn;
+        }
+
+        .right {
+            text-align: right;
+            text-decoration: none;
         }
 
         
     </style>
 </head>
 <body>
-    <br>
     <div class="main">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
-        <img class="logo" loading="lazy"  src="./LogoNoAlpha_Blue.tiff" alt="">
+        <div class="bg"></div>
+        <img class="logo"  src="./LogoAnimatioon_1024x768.gif" alt="">
         <div class="omschrijving">
             <u>bitcrush fanclub <3</u> is an art collective made of young multidisciplinary artists with a common interest in digital music and art.
             <br>
+<!-- 
             ‘fanclub’ means to us being fans of eachother;
             practicing fan culture symbolises our strive towards collectivity in art and life. <u>bitcrush fanclub <3</u> consists of experimental pop artists who are mostly found in inclusive spaces. We center fluid identity and socially accessible art.
+             -->
+        </div>
+        <div class="right">
+
+            <a href="index.html">...enter the <u>fanclub</u>...</a>
         </div>
         <br>
-        <p><u>14 February</u> : Tivoli Vredenburg Utrecht</p>
-        <div class="omschrijving">
-        </div>
-        <br>
-        <p><u>12 March</u> : ACU Utrecht</p>
     </div>
 
 </body>
